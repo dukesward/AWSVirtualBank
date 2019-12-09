@@ -8,10 +8,10 @@
 		<version>2.2.0.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.virtualBank.customer</groupId>
-	<artifactId>virtual-bank-customer</artifactId>
+	<groupId>com.virtualBank.accounts</groupId>
+	<artifactId>virtual-bank-accounts</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>virtual-bank-customer</name>
+	<name>virtual-bank-accounts</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
