@@ -1,6 +1,6 @@
 package com.virtualBank.customer.domain;
 
-public class Customer {
+public class User {
     private String username;
     private String password;
 

@@ -1,8 +1,11 @@
 package com.virtualBank.customer.service;
 
-import com.virtualBank.customer.domain.Customer;
-import com.virtualBank.customer.vo.Response;
+import com.virtualBank.customer.domain.User;
+import com.virtualBank.customer.model.Customer;
 
 public interface CustomerService {
-    public Response login(Customer customer) ;
+
+    public String login(User user);
+    
+    public Customer getCustomer(String customerId);
 }
