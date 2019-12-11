@@ -13,6 +13,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +26,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerController {
     @Autowired
     CustomerService customerService;
-
+    
+    @CrossOrigin
     @PostMapping("/customer/login")
     public ResponseEntity<Map<String, Object>> login(@RequestBody User customer) {
     	Map<String, Object> map = new HashMap<>();
@@ -40,6 +42,7 @@ public class CustomerController {
     	}
     }
     
+    @CrossOrigin
     @GetMapping("/customer/profiles")
     public ResponseEntity<Map<String, Object>> getCustomerProfiles(@RequestHeader String customerId) {
     	Map<String, Object> map = new HashMap<>();
