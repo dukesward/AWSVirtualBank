@@ -1,13 +1,13 @@
-package com.virtualBank.customer;
+package com.virtualBank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VirtualBankCustomerApplication {
+public class VirtualBankApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VirtualBankCustomerApplication.class, args);
+		SpringApplication.run(VirtualBankApplication.class, args);
 	}
 
 }
