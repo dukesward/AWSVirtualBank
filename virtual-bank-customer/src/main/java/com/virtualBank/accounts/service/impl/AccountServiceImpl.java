@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 
 import com.virtualBank.accounts.model.Account;
 import com.virtualBank.accounts.model.AccountGroupSummary;
+import com.virtualBank.accounts.model.CheckingAccount;
 import com.virtualBank.accounts.model.CreditCardAccount;
+import com.virtualBank.accounts.model.SavingsAccount;
 import com.virtualBank.accounts.service.AccountService;
 
 @Service
@@ -35,8 +37,9 @@ public class AccountServiceImpl implements AccountService {
 	
 	public List<Account> getAccounts(String accountId) {
 		List<Account> accountList = new ArrayList<Account>();
-		Account creditCardAccount = new CreditCardAccount();
-		accountList.add(creditCardAccount);
+		accountList.add(new CreditCardAccount());
+		accountList.add(new CheckingAccount());
+		accountList.add(new SavingsAccount());
 		return accountList;
 	};
 }
