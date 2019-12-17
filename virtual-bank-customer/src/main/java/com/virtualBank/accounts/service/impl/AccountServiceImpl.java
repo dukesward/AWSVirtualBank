@@ -1,8 +1,6 @@
 package com.virtualBank.accounts.service.impl;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Service;
@@ -35,11 +33,11 @@ public class AccountServiceImpl implements AccountService {
 		return accountSummary;
 	};
 	
-	public List<Account> getAccounts(String accountId) {
-		List<Account> accountList = new ArrayList<Account>();
-		accountList.add(new CreditCardAccount());
-		accountList.add(new CheckingAccount());
-		accountList.add(new SavingsAccount());
-		return accountList;
+	public Map<String, Account> getAccounts(String accountId) {
+		Map<String, Account> accounts = new HashMap<>();
+		accounts.put("creditCardAccount", new CreditCardAccount());
+		accounts.put("checkingAccount", new CheckingAccount());
+		accounts.put("savingsAccount", new SavingsAccount());
+		return accounts;
 	};
 }

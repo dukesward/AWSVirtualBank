@@ -1,6 +1,6 @@
 package com.virtualBank.accounts.controller;
 
-import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,12 +39,12 @@ public class AccountsController {
 	
 	@CrossOrigin
 	@GetMapping("/{accountId}")
-    public ResponseEntity<List<Account>> getAccountDetails(
+    public ResponseEntity<Map<String, Account>> getAccountDetails(
     		@PathVariable("accountId") String accountId,
     		@RequestHeader String clientId
     ) {
-		List<Account> accountList = this.accountService.getAccounts(accountId);
-		ResponseEntity<List<Account>> response = new ResponseEntity<>(accountList, HttpStatus.OK);
+		Map<String, Account> accountList = this.accountService.getAccounts(accountId);
+		ResponseEntity<Map<String, Account>> response = new ResponseEntity<>(accountList, HttpStatus.OK);
         return response;
     }
 	
