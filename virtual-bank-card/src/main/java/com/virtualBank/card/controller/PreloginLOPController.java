@@ -20,6 +20,8 @@ public class PreloginLOPController {
     public String index() {
         return "forward:/index.html";
     }
+
+    @CrossOrigin
     @GetMapping(value = "/getOfferDetails")
     @ApiOperation(value = "get customer offer details", notes = "using offer id to get customer offer details.")
     @ApiImplicitParam(name = "offerId", value = "offerId", paramType = "query", required = true, dataType = "String")
@@ -28,6 +30,7 @@ public class PreloginLOPController {
         return offer;
     }
 
+    @CrossOrigin
     @PostMapping(value = "/standLoanAdd")
     @ApiOperation(value = "loan on line", notes = "Stand Loan Online")
     public StandLoanAddRs standLoanAdd(@RequestBody StandLoanAddRq standLoandAddRq) {
